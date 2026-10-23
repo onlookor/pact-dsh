@@ -1,6 +1,8 @@
 # dsh-plugin-pact
 
-[![npm](https://img.shields.io/npm/v/dsh-plugin-pact.svg)](https://www.npmjs.com/package/dsh-plugin-pact)
+[![npm version](https://img.shields.io/npm/v/dsh-plugin-pact.svg)](https://www.npmjs.com/package/dsh-plugin-pact)
+
+> **Published:** [`dsh-plugin-pact`](https://www.npmjs.com/package/dsh-plugin-pact) is published on npm (latest `0.1.2`), so `dsh plugin add dsh-plugin-pact` installs the released package directly.
 
 DeepSeek Harness（DSH）的 PACT 治理插件。它接管 `AgentFactory` 的注册者，但**不重写** DSH 的 `ReactLoopAgent`：PACT 只决定“这一步能不能开始、这个工具能不能执行”，模型调用、工具执行与会话持久化仍由 DSH 完成。
 
@@ -105,7 +107,7 @@ npm run check   # node --check index.js loop.js src/*.js
 npm test        # node --test test/*.test.js
 ```
 
-当前 7 个测试文件、47 项通过。测试不需要 DSH，也不需要 WASM 产物；`openPactHost` 的真实产物往返由上游 `crates/pact-wasm/js/ci-smoke.js` 在 CI 的 wasm job 覆盖。
+当前 8 个测试文件、49 项通过。测试不需要 DSH，也不需要 WASM 产物；`openPactHost` 的真实产物往返由上游 `crates/pact-wasm/js/ci-smoke.js` 在 CI 的 wasm job 覆盖。
 
 ## 审计与安全
 

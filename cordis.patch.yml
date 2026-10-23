@@ -5,9 +5,9 @@
   disabled: true
 - insert:
     - id: pact-agent-loop
-      name: '@pact/dsh-plugin/loop'
+      name: 'dsh-plugin-pact/loop'
       config:
         agents: []
     - id: dsh-pact-observe
-      name: '@pact/dsh-plugin'
+      name: 'dsh-plugin-pact'
       config: {}

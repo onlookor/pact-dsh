@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-pact",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "description": "PACT governance plugin for DeepSeek Harness agent loops",
   "license": "MIT",
