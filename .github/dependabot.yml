@@ -1,0 +1,16 @@
+version: 2
+
+updates:
+  # 固定 SHA 的 action 由 Dependabot 提 PR 升级，保留版本注释。
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: ci
+    groups:
+      github-actions:
+        patterns:
+          - '*'
