@@ -1,0 +1,55 @@
+{
+  "name": "dsh-plugin-pact",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "PACT governance plugin for DeepSeek Harness agent loops",
+  "license": "MIT",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onlookor/pact-dsh.git"
+  },
+  "homepage": "https://github.com/onlookor/pact-dsh#readme",
+  "bugs": {
+    "url": "https://github.com/onlookor/pact-dsh/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "pact",
+    "agent-loop",
+    "governance"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-agent-loop": "^0.2.1-rc.2"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./loop": "./loop.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "loop.js",
+    "cordis.patch.yml",
+    "src/**/*.js",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "node --check index.js loop.js src/*.js"
+  }
+}
