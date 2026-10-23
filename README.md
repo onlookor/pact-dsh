@@ -1,5 +1,7 @@
 # dsh-plugin-pact
 
+[![npm](https://img.shields.io/npm/v/dsh-plugin-pact.svg)](https://www.npmjs.com/package/dsh-plugin-pact)
+
 DeepSeek Harness（DSH）的 PACT 治理插件。它接管 `AgentFactory` 的注册者，但**不重写** DSH 的 `ReactLoopAgent`：PACT 只决定“这一步能不能开始、这个工具能不能执行”，模型调用、工具执行与会话持久化仍由 DSH 完成。
 
 - 规范与实现背景：上游 [PACT 仓库](https://github.com/onlookor/pact-collab) 的决策 D37 / 需求 FR25（设计 §17、手册 §13）。
@@ -9,7 +11,7 @@ DeepSeek Harness（DSH）的 PACT 治理插件。它接管 `AgentFactory` 的注
 ## 安装
 
 ```bash
-# 从 npm（发布后）
+# 从 npm
 dsh plugin --profile web add dsh-plugin-pact
 
 # 直接从 GitHub
